@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --trek-black: 26 26 26;
+    --trek-gray: 45 45 45;
+    --trek-red: 200 16 46;
+    --trek-blue: 0 76 151;
+  }
+
+  body {
+    @apply font-sans;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-trek-black text-white px-6 py-3 font-medium hover:bg-trek-gray transition-colors duration-200;
+  }
+
+  .btn-secondary {
+    @apply bg-white text-trek-black border-2 border-trek-black px-6 py-3 font-medium hover:bg-gray-50 transition-colors duration-200;
+  }
+
+  .sale-badge {
+    @apply bg-trek-red text-white text-xs font-bold px-2 py-1 rounded;
+  }
+
+  .hero-text {
+    @apply text-white text-center;
+  }
+
+  .hero-title {
+    @apply text-4xl md:text-6xl font-bold mb-4;
+  }
+
+  .hero-subtitle {
+    @apply text-xl md:text-2xl mb-8 font-light;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
